@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --home-bg: #00a6fb;
+  --heading: 'Bagel Fat One';
+  --heading-color: #F7B538;
+  --icon-color: #ffd43b;
+  --title-font: 'Montserrat';
+  --status-text: 'Sansation';
+  --color-dark: #003049;
+  
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #00a6fb;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  background-color: var(--color-dark);
+}
+
+.subheading {
+  font-family: 'Poppins';
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.1s ease;
+}
+
+.choice:hover {
+  cursor: pointer;
+  border: 2px solid var(--home-bg);
+}
+
+@media (width > 40rem) and (width <= 768px) {
+  .cloud-img {
+    width: 500px;
+  }
+
+  .cloud-heading {
+    width: 50%;
+    font-size: var(--text-5xl);
+  }
+
+  .game-status {
+    width: 50%;
+  }
+
+  .choice-section {
+    width: 50%;
+  }
+
+  .count-container {
+    top: 1rem;
+    right: 1rem;
+    font-size: var(--text-xl);
+  }
+}
